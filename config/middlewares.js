@@ -1,6 +1,6 @@
 module.exports = [
   'strapi::errors',
-   {
+  {
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
@@ -20,15 +20,7 @@ module.exports = [
       },
     },
   },
-  {
-    name: 'strapi::cors',
-    config: {
-      enabled: true,
-      origin: ['http://localhost:3000'], // Tambahkan URL aplikasi Next.js Anda
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],
-      headers: ['Content-Type', 'Authorization'],
-    },
-  },
+  'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
